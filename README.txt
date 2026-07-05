@@ -1,11 +1,11 @@
-AI NFL Referee
+# AI NFL Referee
 
 Computer vision system that analyzes football video to detect basic game events such as snap moments, out-of-bounds plays, and potential touchdowns using object detection and motion heuristics.
 
-Overview:
+# Overview:
 This project uses YOLOv8 to detect players in video frames and applies rule-based logic to estimate field position and identify events. It is not trained on football-specific data and instead relies on general object detection plus custom tracking rules.
 
-Features:
+# Features:
 Player detection using YOLOv8
 Motion-based snap detection
 Line of scrimmage estimation from player positions
@@ -14,26 +14,26 @@ Endzone (touchdown candidate) detection
 Simple movement-based offside check
 Real-time video overlay visualization
 
-Requirements:
+# Requirements:
 Python 3.10+
 OpenCV
 NumPy
 Ultralytics
 
-Install dependencies:
+# Install dependencies:
 pip install opencv-python numpy ultralytics
 
-Run:
+# Run:
 python referee.py
 Press q to exit.
 
-Limitations:
+# Limitations:
 No object tracking model (frame-by-frame detection only)
 Player identity is not preserved across frames
 Event detection is rule-based, not learned from data
 Works best on stable broadcast-style footage
 
-Future Work:
+# Future Work:
 Add multi-object tracking (ByteTrack/DeepSORT)
 Improve snap detection accuracy
 Add custom-trained football detection model
